@@ -80,6 +80,9 @@
 #include <linux/kcov.h>
 #include <linux/cpufreq_times.h>
 #include <linux/devfreq_boost.h>
+#include <linux/cpu_input_boost.h>
+#include <linux/devfreq_boost.h>
+#include <linux/simple_lmk.h>
 
 #include <asm/pgtable.h>
 #include <asm/pgalloc.h>
@@ -1785,6 +1788,12 @@ long _do_fork(unsigned long clone_flags,
 	/* Boost DDR bus to the max for 50 ms when userspace launches an app */
 	if (task_is_zygote(current))
 		devfreq_boost_kick_max(DEVFREQ_MSM_CPUBW, 50);
+
+	/* Boost CPU to the max for 50 ms when userspace launches an app */
+	if (is_zygote_pid(current->pid)) {
+		cpu_input_boost_kick_max(50);
+		devfreq_boost_kick_max(DEVFREQ_MSM_CPUBW, 50);
+	}
 
 	/*
 	 * Determine whether and which event to report to ptracer.  When
