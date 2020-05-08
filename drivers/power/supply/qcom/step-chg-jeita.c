@@ -122,10 +122,11 @@ static struct jeita_fcc_cfg jeita_fcc_config = {
 	.hysteresis	= 0, /* 1degC hysteresis */
 	.fcc_cfg	= {
 		/* TEMP_LOW	TEMP_HIGH	FCC */
-		{0,		50,		300000},
-		{51,		150,		900000},
-		{151,	450,		2900000},
-		{451,	600,		1500000},
+		{0,			50,			 400000},
+		{51,		150,		1200000},
+		{151,		430,		2500000},
+		{431,		450,		2000000},
+		{451,		600,		1500000},
 	},
 };
 #elif defined(CONFIG_KERNEL_CUSTOM_F7A)
@@ -135,10 +136,11 @@ static struct jeita_fcc_cfg jeita_fcc_config = {
 	.hysteresis	= 0, /* 1degC hysteresis */
 	.fcc_cfg	= {
 		/* TEMP_LOW	TEMP_HIGH	FCC */
-		{0,		50,		400000},
+		{0,			50,			 400000},
 		{51,		150,		1200000},
-		{151,	450,		2900000},
-		{451,	600,		2000000},
+		{151,		430,		2500000},
+		{431,		450,		2000000},
+		{451,		600,		1500000},
 	},
 };
 #elif defined(CONFIG_KERNEL_CUSTOM_E7S)
@@ -148,10 +150,11 @@ static struct jeita_fcc_cfg jeita_fcc_config = {
 	.hysteresis	= 0, /* 1degC hysteresis */
 	.fcc_cfg	= {
 		/* TEMP_LOW	TEMP_HIGH	FCC */
-		{0,		50,		400000},
+		{0,			50,			 400000},
 		{51,		150,		1200000},
-		{151,		450,		2500000},
-		{451,		600,		1200000},
+		{151,		430,		2500000},
+		{431,		450,		2000000},
+		{451,		600,		1500000},
 	},
 };
 #elif defined(CONFIG_KERNEL_CUSTOM_E7T)
@@ -161,10 +164,11 @@ static struct jeita_fcc_cfg jeita_fcc_config = {
 	.hysteresis	= 0, /* 1degC hysteresis */
 	.fcc_cfg	= {
 		/* TEMP_LOW	TEMP_HIGH	FCC */
-		{0,		50,		400000},
+		{0,			50,			 400000},
 		{51,		150,		1200000},
-		{151,		450,		2500000},
-		{451,		600,		2000000},
+		{151,		430,		2500000},
+		{431,		450,		2000000},
+		{451,		600,		1500000},
 	},
 };
 #endif
