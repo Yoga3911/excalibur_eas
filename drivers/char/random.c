@@ -314,7 +314,7 @@ static int random_write_wakeup_bits = 1792;
  * do this to limit the amount of entropy that can be drained from the
  * input pool even if there are heavy demands on /dev/urandom.
  */
-static int random_min_urandom_seed = 60;
+static int random_min_urandom_seed = 90;
 
 /*
  * Originally, we used a primitive polynomial of degree .poolwords
