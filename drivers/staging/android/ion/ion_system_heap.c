@@ -455,7 +455,6 @@ static int ion_system_heap_allocate(struct ion_heap *heap,
 					  ARRAY_SIZE(info_onstack));
 				if (sg_sync)
 					sg_sync = sg_next(sg_sync);
-				sg_sync = sg_next(sg_sync);
 			} else {
 				i = process_info(tmp_info, sg, 0, 0, i);
 				free_info(tmp_info, info_onstack,
@@ -466,7 +465,6 @@ static int ion_system_heap_allocate(struct ion_heap *heap,
 			free_info(info, info_onstack, ARRAY_SIZE(info_onstack));
 			if (sg_sync)
 				sg_sync = sg_next(sg_sync);
-			sg_sync = sg_next(sg_sync);
 		} else if (tmp_info) {
 			i = process_info(tmp_info, sg, 0, 0, i);
 			free_info(tmp_info, info_onstack,
