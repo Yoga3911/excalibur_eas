@@ -109,11 +109,11 @@ build(){
 
 	make_clean
 
-	if [ $2 == "-oldcam" ]
+	if [ $2 == "-newcam" ]
 	then
 		make_build "${1}-perf_defconfig"
 	else
 		make_build "${1}-perf_defconfig"
 	fi
-		mkzip "$KERNELNAME-$LOCALVERSION-${1}${2}${3}-$DATE.zip"
+		mkzip "$KERNELNAME-${1}${2}${3}-$DATE.zip"
 }
