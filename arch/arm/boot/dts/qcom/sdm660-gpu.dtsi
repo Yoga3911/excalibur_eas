@@ -450,9 +450,9 @@
 				qcom,gpu-pwrlevel@0 {
 					reg = <0>;
 					qcom,gpu-freq = <647000000>;
-					qcom,bus-freq = <13>;
-					qcom,bus-min = <12>;
-					qcom,bus-max = <13>;
+					qcom,bus-freq = <15>;
+					qcom,bus-min = <14>;
+					qcom,bus-max = <15>;
 				};
 
 				/* NOM */
