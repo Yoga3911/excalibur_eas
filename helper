@@ -46,17 +46,17 @@ send_file(){
 	let "seconds=(SECONDS%3600)%60"
 	if (( $SECONDS > 3600 )) ; then
 	   curl -F chat_id="${chat_id}" \
-		-F caption="✅ Waktu: $hours jam $minutes menit $seconds detik ✅ Last commit: $(git log --pretty=format:'%s' -5)" \
+		-F caption="✅Waktu: $hours jam $minutes menit $seconds detik✅ Last commit: $(git log --pretty=format:'%s' -5)" \
 		-F document=@"${1}" \
 		 https://api.telegram.org/bot"${bot_token}"/sendDocument 
 	elif (( $SECONDS > 60 )) ; then
 	   curl -F chat_id="${chat_id}" \
-		-F caption="✅ Waktu: $minutes menit $seconds detik ✅ Last commit: $(git log --pretty=format:'%s' -5)" \
+		-F caption="✅Waktu: $minutes menit $seconds detik✅ Last commit: $(git log --pretty=format:'%s' -5)" \
 		-F document=@"${1}" \
 		 https://api.telegram.org/bot"${bot_token}"/sendDocument
 	else
 	   curl -F chat_id="${chat_id}" \
-		-F caption="✅ Waktu: $seconds detik ✅ Last commit: $(git log --pretty=format:'%s' -5)" \
+		-F caption="✅Waktu: $seconds detik✅ Last commit: $(git log --pretty=format:'%s' -5)" \
 		-F document=@"${1}" \
 		 https://api.telegram.org/bot"${bot_token}"/sendDocument
 	fi
