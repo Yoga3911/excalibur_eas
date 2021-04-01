@@ -51,7 +51,7 @@
 			<  4943 /*  1296 MHz */ >,
 			<  5161 /*  1353 MHz */ >,
 			<  5931 /*  1555 MHz */ >,
-			<  7220 /*  1900 MHz */ >;
+			<  7600 /*  2000 MHz */ >;
 	};
 
 	msm_gpu: qcom,kgsl-3d0@5000000 {
@@ -113,7 +113,7 @@
 				<26 512 0 5184000>,    /* 10 bus=1296 */
 				<26 512 0 5412000>,    /* 11 bus=1353 */
 				<26 512 0 6220000>,    /* 12 bus=1555 */
-				<26 512 0 7547000>;    /* 13 bus=1900 */
+				<26 512 0 7927000>;    /* 13 bus=2000 */
 
 		/* GDSC regulator names */
 		regulator-names = "vddcx", "vdd";
@@ -207,9 +207,9 @@
 				qcom,gpu-pwrlevel@2 {
 					reg = <2>;
 					qcom,gpu-freq = <647000000>;
-					qcom,bus-freq = <11>;
-					qcom,bus-min = <10>;
-					qcom,bus-max = <12>;
+					qcom,bus-freq = <13>;
+					qcom,bus-min = <13>;
+					qcom,bus-max = <13>;
 				};
 
 				/* NOM */
@@ -297,9 +297,9 @@
 				qcom,gpu-pwrlevel@2 {
 					reg = <2>;
 					qcom,gpu-freq = <647000000>;
-					qcom,bus-freq = <11>;
-					qcom,bus-min = <10>;
-					qcom,bus-max = <12>;
+					qcom,bus-freq = <13>;
+					qcom,bus-min = <13>;
+					qcom,bus-max = <13>;
 				};
 
 				/* NOM */
@@ -378,9 +378,9 @@
 				qcom,gpu-pwrlevel@1 {
 					reg = <1>;
 					qcom,gpu-freq = <647000000>;
-					qcom,bus-freq = <11>;
-					qcom,bus-min = <10>;
-					qcom,bus-max = <12>;
+					qcom,bus-freq = <13>;
+					qcom,bus-min = <13>;
+					qcom,bus-max = <13>;
 				};
 
 				/* NOM */
