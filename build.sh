@@ -16,7 +16,7 @@ source helper
 
 gen_toolchain
 
-send_msg "⏳ Mulai memasak ${KERNELNAME} kernel ⏳"
+send_msg "⏳ Memasak ${KERNELNAME} kernel ⏳"
 
 START=$(date +"%s")
 
