@@ -72,7 +72,7 @@ mkzip(){
 		cd ..
 		send_file $1
 	else
-		send_msg "Build Failed !"
+		send_msg "❌Masakanmu gosong bang !❌"
 		print "Build error !" red
 		exit 1
 	fi
