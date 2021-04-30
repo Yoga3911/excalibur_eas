@@ -100,7 +100,7 @@ gen_toolchain(){
 		git clone --depth=1 https://github.com/chips-project/aarch64-elf gcc64
 		git clone --depth=1 https://github.com/chips-project/arm-eabi gcc32
 	fi
-	git clone --depth=1 https://github.com/Yoga3911/AnyKernel3 -b master anykernel
+	git clone --depth=1 https://github.com/Yoga3911/AnyKernel33 -b master anykernel
 }
 
 build(){
@@ -111,9 +111,10 @@ build(){
 
 	if [ $2 == "-oldcam" ]
 	then
-		make_build "${1}-perf_defconfig"
+		make_build "${1}-old_defconfig"
 	else
-		make_build "${1}-perf_defconfig"
+		make_build "${1}-new_defconfig"
+		send_msg "📝 $(git log --pretty=format:'%s' -5) 📝"
 	fi
-		mkzip "$KERNELNAME-${1}${2}${3}-$DATE.zip"
+		mkzip "$KERNELNAME-EAS-${1}${2}${3}-$DATE.zip"
 }
