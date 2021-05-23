@@ -94,8 +94,6 @@ enum frm_cfg {
 	FRM_ACTIVE	= 1,
 	CLK_GEAR	= 7,
 	ROOT_FREQ	= 11,
-	CLK_GEAR	= 11,
-	ROOT_FREQ	= 31,
 	REF_CLK_GEAR	= 15,
 	INTR_WAKE	= 19,
 };
@@ -209,7 +207,7 @@ static irqreturn_t msm_slim_interrupt(int irq, void *d)
 		 * signalling completion/exiting ISR
 		 */
 		mb();
-		msm_slim_manage_tx_msgq(dev, false, NULL, 0);
+		msm_slim_manage_tx_msgq(dev, false, NULL);
 	}
 	if (stat & MGR_INT_RX_MSG_RCVD) {
 		u32 rx_buf[10];
