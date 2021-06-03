@@ -103,5 +103,5 @@ build(){
 		make_build "${1}-new_defconfig"
 		send_msg "📝 $(git log --pretty=format:'%s' -5) 📝"
 	fi
-		mkzip "$KERNELNAME-EAS-66HZ${2}${3}-$DATE.zip"
+		mkzip "$KERNELNAME-EAS${2}${3}-$DATE.zip"
 }
